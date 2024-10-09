@@ -1,6 +1,29 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
+import { appConfig, createTranslateLoader } from './app/app.config';
 import { AppComponent } from './app/app.component';
-
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+import {
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
+import {
+  importProvidersFrom,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    provideExperimentalZonelessChangeDetection(),
+    importProvidersFrom(
+      BrowserModule,
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: createTranslateLoader,
+          deps: [HttpClient],
+        },
+      })
+    ),
+  ],
+}).catch((err) => console.error(err));
