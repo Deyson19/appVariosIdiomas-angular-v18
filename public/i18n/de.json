@@ -1,0 +1,12 @@
+{
+  "hello":"Hallo",
+"angular": "Ein auf TypeScript basierendes Open-Source-Webanwendungsframework, entwickelt von Google.",
+    "react": "Eine JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen, betrieben von Facebook.",
+    "javascript": "Eine Programmiersprache, die häufig verwendet wird, um interaktive Effekte innerhalb von Webbrowsern zu erstellen.",
+    "algorithm": "Ein Satz von Regeln oder Schritten, die verwendet werden, um ein Problem zu lösen.",
+    "error": "Ein Fehler in einem Programm, der dazu führt, dass es falsch funktioniert.",
+    "compiler": "Ein Werkzeug, das Quellcode in ausführbaren Code übersetzt.",
+    "database": "Eine organisierte Sammlung von Daten, die in der Regel elektronisch gespeichert und abgerufen wird.",
+    "framework": "Eine Plattform zur Entwicklung von Softwareanwendungen.",
+    "API": "Ein Satz von Funktionen und Verfahren, die die Erstellung von Anwendungen ermöglichen, die auf die Funktionen oder Daten eines Betriebssystems, einer Anwendung oder eines anderen Dienstes zugreifen."
+}
